@@ -1,7 +1,8 @@
 
 class SneakerExtended{
-  constructor({Updater}){
+  constructor({Updater, NameResolver}){
     this.Updater = Updater
+    this.NameResolver = NameResolver
   }
 
   async toJson(sneaker){
@@ -42,12 +43,12 @@ class SneakerExtended{
     }
 
     sneaker.brands
-      ? result.brands = sneaker.brands.map((el)=>el.name)
-      : result.brands = (await sneaker.getBrands()).map((el)=>el.name)
+      ? result.brands = this.NameResolver.toName(sneaker.brands.map((el)=>el.name))
+      : result.brands = this.NameResolver.toName((await sneaker.getBrands()).map((el)=>el.name))
 
     sneaker.sets
-      ? result.sets = sneaker.sets.map((el)=>el.name)
-      : result.sets = (await sneaker.getSets()).map((el)=>el.name)
+      ? result.sets = this.NameResolver.toName(sneaker.sets.map((el)=>el.name))
+      : result.sets = this.NameResolver.toName((await sneaker.getSets()).map((el)=>el.name))
 
     result.prices = await this.Updater.getRelevantPrices(sneaker)
 

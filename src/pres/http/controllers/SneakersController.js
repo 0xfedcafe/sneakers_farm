@@ -71,10 +71,10 @@ class SneakersController{
     }
     if(sneaker.needParsing()){
       sneaker.updateTimestamps()
-      res.json({needParsing: true, result: await this.SneakerExtendedResource.toJson(sneaker)})
+      res.json({needParsing: true, hrefsCount: (await sneaker.getHrefs()).length, result: await this.SneakerExtendedResource.toJson(sneaker)})
     }
     else{
-      res.json({needParsing: false, result: await this.SneakerExtendedResource.toJson(sneaker)})
+      res.json({needParsing: false, hrefsCount: (await sneaker.getHrefs()).length, result: await this.SneakerExtendedResource.toJson(sneaker)})
     }
   }
 

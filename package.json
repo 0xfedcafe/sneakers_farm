@@ -10,8 +10,8 @@
   },
   "scripts": {
     "start": "export NODE_ENV=production && node -r esm src/index ",
-    "dev": "export NODE_ENV=development && node -r esm src/index ",
-    "prod": "export NODE_ENV=production && node -r esm src/index ",
+    "dev": "export NODE_ENV=development && nodemon -r esm src/index ",
+    "prod": "export NODE_ENV=production && nodemon -r esm src/index ",
     "test": "jest --detectOpenHandles",
     "refresh_dev": "export NODE_ENV=development && sequelize db:migrate:undo:all && sequelize db:migrate  ",
     "refresh_prod": "export NODE_ENV=production && sequelize db:migrate:undo:all && sequelize db:migrate  "
