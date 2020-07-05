@@ -6,7 +6,13 @@ class Seq{
     return new Sequelize(config.sql.database,config.sql.user,config.sql.password,{
       host:config.sql.host,
       dialect:'mysql',
-      logging: false
+      logging: false,
+      pool: {
+        max: 10,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+      }
     })
   }
 }
