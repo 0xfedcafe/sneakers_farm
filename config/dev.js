@@ -13,6 +13,7 @@ module.exports = {
   EurToUsd: 1.12,
   proxy: 'https://app.zenscrape.com/api/v1/get?apikey=2ee13050-298b-11ea-a2c0-f57b0d6fdc24&url=',
   timeout: 20000,
+  parse_delay: 1000 * 60 * 15,
   brands:[
     'ADIDAS',
     'YEEZY'

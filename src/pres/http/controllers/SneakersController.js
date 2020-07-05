@@ -69,7 +69,13 @@ class SneakersController{
       res.json({total: 0, results: [] })
       return;
     }
-    res.json({total: 1, results: [await this.SneakerExtendedResource.toJson(sneaker)]})
+    if(sneaker.needParsing()){
+      sneaker.updateTimestamps()
+      res.json({needParsing: true, result: await this.SneakerExtendedResource.toJson(sneaker)})
+    }
+    else{
+      res.json({needParsing: false, result: await this.SneakerExtendedResource.toJson(sneaker)})
+    }
   }
 
 }

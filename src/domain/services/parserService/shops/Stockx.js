@@ -28,15 +28,8 @@ class Stockx extends Shop{
           html = $(el).html()
         }
       })
-      try {
-        const jsonArray = JSON.parse(html)
-      } catch (e) {
-        fs.appendFile('log.html', html,(err)=>{
-          if(err)
-            console.log(err);
-        });
-      }
-      for(var offer of jsonArray.offers){
+      const jsonArray = JSON.parse(html)
+      for(var offer of jsonArray.offers.offers){
         prices.push({
           size: offer.description,
           price: offer.price,
@@ -46,7 +39,7 @@ class Stockx extends Shop{
         })
       }
     } catch (e) {
-      console.log(html);
+      console.log(e);
     } finally {
       return prices
     }

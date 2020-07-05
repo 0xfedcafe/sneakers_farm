@@ -14,7 +14,8 @@ module.exports = {
       shop: Sequelize.STRING(20),
       href: Sequelize.STRING(200),
       price: Sequelize.INTEGER,
-      condition: Sequelize.STRING(20),
+      boxCondition: Sequelize.STRING(20),
+      shoeCondition: Sequelize.STRING(20),
 
       createdAt: Sequelize.DATE,
       updatedAt: Sequelize.DATE

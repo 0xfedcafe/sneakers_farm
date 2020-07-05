@@ -15,6 +15,8 @@ class BotController{
         await sneaker.parseLinks()
         await sneaker.parseInfo()
         this.Logger.log('Sneaker '+sneaker.sneaker_id+' '+sneaker.model+' added with ' +(await sneaker.getHrefs()).length+' links')
+        await sneaker.parsePrices()
+        this.Logger.log('prices ready')
       } catch (e) {
         await sneaker.removeGlobal()
         this.Logger.log('Invalid sneaker id')

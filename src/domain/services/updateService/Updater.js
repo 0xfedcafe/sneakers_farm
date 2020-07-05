@@ -11,7 +11,6 @@ class Updater{
     for(let price of priceArray.prices){
       price.shop = priceArray.shop
       price.sneaker_id = sneaker_id
-      price.price = 0
     }
 
     await this.pricesRepository.batchCreate(priceArray.prices)

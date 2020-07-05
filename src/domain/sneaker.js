@@ -1,7 +1,9 @@
+import Sequelize from 'sequelize'
 
 class Sneaker {
 
-  constructor({sneakersRepository, descriptionsRepository, brandsRepository, setsRepository, pricesRepository, extendedsRepository, imagesRepository, hrefsRepository, Parser, NameResolver, Logger}){
+  constructor({sneakersRepository, descriptionsRepository, brandsRepository, setsRepository, pricesRepository, extendedsRepository, imagesRepository, hrefsRepository,
+     Parser, NameResolver, Logger, Updater, config, sequelize}){
     this.sneakersRepository = sneakersRepository
     this.descriptionsRepository = descriptionsRepository
     this.brandsRepository = brandsRepository
@@ -13,8 +15,11 @@ class Sneaker {
 
     this.NameResolver = NameResolver
     this.Logger = Logger
+    this.Updater = Updater
 
     this.Parser = Parser
+    this.config = config
+    this.sequelize = sequelize
   }
 
   async removeGlobal(){
@@ -82,7 +87,6 @@ class Sneaker {
   async parseInfo(){
     const info = await this.Parser.resolveInfo('Goat.com',this.sneaker_id)
 
-
     const name = this.NameResolver.distructName(info.name)
 
     const set = await this.setsRepository.findOrCreate({name: name.set})
@@ -103,9 +107,23 @@ class Sneaker {
     this.release_date = info.release_date
     this.model = name.model
     this.addition = name.addition
+    this.lastUpdated = new Date()
 
 
     await this.save()
+  }
+
+  async parsePrices(){
+    const hrefs = await this.getHrefs()
+
+    const priceArrays = this.Parser.resolvePrices(hrefs,this.sneaker_id)
+    for(let promise of priceArrays){
+      promise = promise.then(async (priceArray)=>{
+        await this.Updater.updatePrices(this.sneaker_id,priceArray)
+      })
+    }
+
+    await Promise.all(priceArrays)
   }
 
   async getMinValues(){
@@ -122,6 +140,25 @@ class Sneaker {
         shop: 'undefined'
       }
     }
+  }
+
+  needParsing(){
+    if(this.isBigTimeout(new Date(this.lastUpdated))){
+      return true
+    }
+    return false
+  }
+
+  isBigTimeout(date){
+    if(Math.abs((new Date()).getTime()-date.getTime())>this.config.parse_delay){
+      return true
+    }
+    return false
+  }
+
+  async updateTimestamps(){
+    this.lastUpdated = new Date()
+    await this.sneakersRepository.save(this)
   }
 
 }

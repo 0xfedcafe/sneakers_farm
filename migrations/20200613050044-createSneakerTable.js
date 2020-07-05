@@ -16,6 +16,7 @@ module.exports = {
       description_id: Sequelize.INTEGER,
       image_id: Sequelize.INTEGER,
       extended_id: Sequelize.INTEGER,
+      lastUpdated: Sequelize.DATE,
 
       createdAt: Sequelize.DATE,
       updatedAt: Sequelize.DATE
