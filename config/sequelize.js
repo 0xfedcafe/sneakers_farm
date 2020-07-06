@@ -8,7 +8,7 @@ class Seq{
       dialect:'mysql',
       logging: false,
       pool: {
-        max: 5,
+        max: 10,
       }
     })
   }
