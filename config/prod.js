@@ -5,7 +5,7 @@ module.exports = {
   sql:{
     user: "root",
     password: "Igor04rik",
-    database: "root",
+    database: "sneakers_farm",
     host: "root.ctim5d9dbii9.us-east-2.rds.amazonaws.com",
   },
   logUrl: 'https://sneakers-farm-bot.herokuapp.com',
