@@ -1,0 +1,30 @@
+{
+  "name": "sneakers_farm_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-telegram-bot-api": "^0.50.0",
+    "telegraf": "^3.38.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "export ENV=development && nodemon index",
+    "prod": "export ENV=production && node index",
+    "start": "export ENV=production && node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IiiigorGG/sneakers_farm_bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IiiigorGG/sneakers_farm_bot/issues"
+  },
+  "homepage": "https://github.com/IiiigorGG/sneakers_farm_bot#readme"
+}

@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_USER: root_user
+      MYSQL_PASSWORD: root_password
+      MYSQL_DATABASE: root_database
+      MYSQL_ROOT_PASSWORD: root_password
+
+  server:
+    build:
+      context: ./backend/server
+    working_dir: /usr/src/app
+    volumes:
+      - ./backend/server:/usr/src/app
+    command: 'npm run dev'
+    ports:
+      - 8000:8000
+
+  bot:
+    build:
+      context: ./backend/bot
+    working_dir: /usr/src/app
+    volumes:
+      - ./backend/bot:/usr/src/app
+    command: bash -c "
+             && npm run dev"
