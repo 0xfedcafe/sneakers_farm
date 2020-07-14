@@ -1,0 +1,22 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+        environment:
+          NODE_ENV: ci
+      - image: circleci/mysql:latest
+        environment:
+          MYSQL_USER: root_user
+          MYSQL_PASSWORD: root_password
+          MYSQL_DATABASE: root_database
+          MYSQL_ROOT_PASSWORD: root_password
+          DB_HOST: 127.0.0.1
+          DB_PORT: 3306
+    steps:
+      - checkout
+      - run: cd backend/server && ls
+      - run: cd backend/server && npm install
+      - run: cd backend/server && sudo npm i -g sequelize-cli mysql2
+      - run: cd backend/server && sequelize db:migrate
+      - run: cd backend/server && npm run test -t relations

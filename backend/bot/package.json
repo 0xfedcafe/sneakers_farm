@@ -13,9 +13,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "export ENV=development && nodemon index",
-    "prod": "export ENV=production && node index",
-    "start": "export ENV=production && node index"
+    "dev": "nodemon index",
+    "start": "node index"
   },
   "repository": {
     "type": "git",

@@ -6,10 +6,9 @@ const axios = require('axios').default
 const config = require('./config/keys.js')
 app.use(bodyParser.json())
 
-const token = '1114342384:AAFsgLyEp6dnNu9CQ3qQitDFbxd1bQVrFug'
 
 
-const bot = new Telegraf(token);
+const bot = new Telegraf(config.token);
 bot.use(session())
 
 app.post('/log',(req,res,error)=>{

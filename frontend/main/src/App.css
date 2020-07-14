@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "RobotoMono-Medium";
+  src: url('./fonts/RobotoMono-Medium.ttf');
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url('./fonts/Roboto-Medium.ttf');
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url('./fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto', sans-serif;
+  src :url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap");
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  z-index: 1;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+Link{
+  text-decoration: none;
+}
+
+
+          .Sneakers-Center-Block{
+              display: grid;
+              width: 100%;
+              height: auto;
+              margin-top: 10px;
+              grid-template-columns: 1fr 1fr;
+              grid-gap: 2vw;
+            }
+
+            .Sneakers-Center-Block > div {
+              margin: 0 auto;
+              width: 100%;
+              height: 70px;
+              margin-bottom: 150px;
+
+            }
+            .Price{
+              color: #A9A9A9;
+              font-family: Roboto-Medium ,Roboto , sans-serif ;
+              font-size: 14px;
+              margin-top: 5px;
+            }
+            .SneakersName{
+              color: black;
+              margin-top: 12px;
+              font-family: Roboto-Medium ,Roboto , sans-serif ;
+              font-size: 16px;
+
+            }
+            .GlobalIMG{
+              max-width: 250px;
+              max-height: 145px;
+            }

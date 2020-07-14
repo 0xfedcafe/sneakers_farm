@@ -7,13 +7,20 @@ services:
       MYSQL_PASSWORD: root_password
       MYSQL_DATABASE: root_database
       MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - 3305:3306
 
   server:
     build:
       context: ./backend/server
+    depends_on:
+      - db
     working_dir: /usr/src/app
+    environment:
+      NODE_ENV: development
     volumes:
       - ./backend/server:/usr/src/app
+      - ./usr/src/app/node_modules
     command: 'npm run dev'
     ports:
       - 8000:8000
@@ -22,7 +29,21 @@ services:
     build:
       context: ./backend/bot
     working_dir: /usr/src/app
+    environment:
+      NODE_ENV: development
     volumes:
       - ./backend/bot:/usr/src/app
-    command: bash -c "
-             && npm run dev"
+    command: 'npm run dev'
+
+  front:
+    build:
+      context: ./frontend/main
+    working_dir: /usr/src/app
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./frontend/main:/usr/src/app
+    command: 'npm start'
+    tty: true
+    ports:
+      - 3000:3000
