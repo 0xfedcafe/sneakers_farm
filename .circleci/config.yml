@@ -15,8 +15,6 @@ jobs:
           DB_PORT: 3306
     steps:
       - checkout
-      - run: ls
-      - run: cd backend/main && ls
       - run: cd backend/main && npm install
       - run: cd backend/main && sudo npm i -g sequelize-cli sequelize mysql2
       - run: cd backend/main && sequelize db:migrate
