@@ -12,14 +12,14 @@ services:
 
   server:
     build:
-      context: ./backend/server
+      context: ./backend/main
     depends_on:
       - db
     working_dir: /usr/src/app
     environment:
       NODE_ENV: development
     volumes:
-      - ./backend/server:/usr/src/app
+      - ./backend/main:/usr/src/app
       - ./usr/src/app/node_modules
     command: 'npm run dev'
     ports:

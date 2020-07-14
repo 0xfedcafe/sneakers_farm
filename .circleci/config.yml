@@ -16,8 +16,8 @@ jobs:
     steps:
       - checkout
       - run: ls
-      - run: cd backend/server && ls
-      - run: cd backend/server && npm install
-      - run: cd backend/server && sudo npm i -g sequelize-cli sequelize mysql2
-      - run: cd backend/server && sequelize db:migrate
-      - run: cd backend/server && npm run test -t relations
+      - run: cd backend/main && ls
+      - run: cd backend/main && npm install
+      - run: cd backend/main && sudo npm i -g sequelize-cli sequelize mysql2
+      - run: cd backend/main && sequelize db:migrate
+      - run: cd backend/main && npm run test -t relations

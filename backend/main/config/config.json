@@ -1,0 +1,33 @@
+{
+  "development": {
+    "username": "root_user",
+    "password": "root_password",
+    "database": "root_database",
+    "host": "db",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "Igor04rik",
+    "database": "sneakers_farm",
+    "port": 3306,
+    "host": "root.ctim5d9dbii9.us-east-2.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "ci": {
+    "username": "root_user",
+    "password": "root_password",
+    "database": "root_database",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  }
+}
