@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+docker-compose down --remove-orphan && docker-compose up -d
+
+docker exec -it sneakers_farm_php_1 bash -c "bin/console d:mi:m"

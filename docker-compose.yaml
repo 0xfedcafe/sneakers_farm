@@ -1,0 +1,59 @@
+version: "3.7"
+services:
+
+  db:
+    image: postgres:11
+    environment:
+      - POSTGRES_DB=sneakers_farm
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+    ports:
+      - 5436:5432
+
+  php:
+    build:
+      context: ./Infrastructure/docker/php-fpm
+    volumes:
+      - ./backend/php:/var/www/symfony:cached
+    ports:
+      - '9000:9000'
+
+  nginx:
+    build:
+     context: ./Infrastructure/docker/nginx
+    ports:
+      - '8080:80'
+    volumes:
+      - ./backend/php:/var/www/symfony:cached
+
+  parser:
+    build:
+      context: ./backend/parser
+    working_dir: /usr/src/app
+    depends_on:
+      - mq
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./backend/parser:/usr/src/app
+    command: 'npm run dev'
+
+  mq:
+    image: rabbitmq:3.8-management-alpine
+    environment:
+      - RABBITMQ_VM_MEMORY_HIGH_WATERMARK=300MiB
+      - RABBITMQ_DEFAULT_USER=default
+      - RABBITMQ_DEFAULT_PASS=secret
+    ports:
+      - 15680:15672
+      - 5673:5672
+
+  bot:
+    build:
+      context: ./backend/bot
+    working_dir: /usr/src/app
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./backend/bot:/usr/src/app
+    command: 'npm run dev'
