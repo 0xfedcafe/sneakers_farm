@@ -10,7 +10,47 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c385bbcd-1828-4cb4-8cc7-09a7990cc8f6" name="Default Changelist" comment="Feat (Server) behat fixtures start" />
+    <list default="true" id="c385bbcd-1828-4cb4-8cc7-09a7990cc8f6" name="Default Changelist" comment="Feat (Server) behat fixtures start">
+      <change afterPath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Price/SizeModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/php/src/Domain/Exception/Repository/SneakerEntityNotFoundByPublicKeyException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/php/src/Infrastructure/MessageBus/Middleware/FailureCatcherMiddleware.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/php/tests/Behat/Feature/external/sneaker/by_id.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/php/tests/Behat/Feature/external/sneaker/last_released.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/php/tests/Behat/Feature/external/sneaker/search.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bot/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/bot/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/config/packages/messenger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/config/packages/messenger.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Application/DTO/Request/External/Sneaker/SneakerByIdRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Application/DTO/Request/External/Sneaker/SneakerByIdRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Application/DTO/Request/External/Sneaker/SneakerSearchRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Application/DTO/Request/External/Sneaker/SneakerSearchRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Image/ImageModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Image/ImageModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Price/PriceListResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Price/PriceListResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Price/PriceModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Price/PriceModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Sneaker/SneakerExtendedModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Sneaker/SneakerExtendedModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Sneaker/SneakerModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Application/DTO/Response/Sneaker/SneakerModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Application/Query/Model/ModelsByBrandId.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Application/Query/Model/ModelsByBrandId.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Application/Query/Sneaker/SneakerById.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Application/Query/Sneaker/SneakerById.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Application/Query/Sneaker/SneakerByIdHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Application/Query/Sneaker/SneakerByIdHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Description.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Description.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Href.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Href.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Price.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Price.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Shelf.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Shelf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Shop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Sneaker.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Domain/Entity/Sneaker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Domain/Repository/SneakerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Domain/Repository/SneakerRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/Infrastructure/EventListener/Kernel/ExceptionListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/Infrastructure/EventListener/Kernel/ExceptionListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/src/UI/Controller/External/SneakersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/src/UI/Controller/External/SneakersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/tests/Behat/Feature/external/brand/all_brands.feature" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/tests/Behat/Feature/external/brand/all_brands.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/tests/Behat/Feature/external/model/models_by_brand_id.feature" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/tests/Behat/Feature/external/model/models_by_brand_id.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/tests/Behat/Feature/external/sneaker/last_released_sneakers.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/tests/DataFixtures/ORM/Brand.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/tests/DataFixtures/ORM/Model.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/tests/DataFixtures/ORM/Shop.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/php/tests/DataFixtures/ORM/Sneaker.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/php/tests/DataFixtures/ORM/Default_Sneaker.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +61,7 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend/php" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -135,19 +175,19 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/php/src/Domain/Exception/Repository" />
+      <recent name="$PROJECT_DIR$/backend/php/tests/Behat/Feature/external/sneaker" />
+      <recent name="$PROJECT_DIR$/backend/php/tests/DataFixtures/ORM" />
+      <recent name="$PROJECT_DIR$/backend/php/src/Infrastructure/MessageBus" />
+      <recent name="$PROJECT_DIR$/backend/server/tests/DataFixtures/Faker" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/server/tests/Behat/Feature/external/brand" />
       <recent name="$PROJECT_DIR$/backend/server/tests/Behat/Feature/external" />
       <recent name="$PROJECT_DIR$/backend/server/tests/Behat/Context" />
       <recent name="$PROJECT_DIR$/backend/server/tests/DataFixtures" />
       <recent name="$PROJECT_DIR$/backend/server/src/Application/Command/Parser" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/backend/server/tests/DataFixtures/Faker" />
-      <recent name="$PROJECT_DIR$/backend/server/tests/DataFixtures/ORM" />
-      <recent name="$PROJECT_DIR$/backend/server/tests/Behat/Feature/external/sneaker" />
-      <recent name="$PROJECT_DIR$/backend/server/src/Domain" />
-      <recent name="$PROJECT_DIR$/backend/server/src/Application" />
     </key>
   </component>
   <component name="RunManager">
@@ -187,7 +227,9 @@
       <workItem from="1595843850125" duration="537000" />
       <workItem from="1595849925215" duration="1670000" />
       <workItem from="1595871579388" duration="8848000" />
-      <workItem from="1595924177550" duration="1813000" />
+      <workItem from="1595924177550" duration="2031000" />
+      <workItem from="1595944062402" duration="12716000" />
+      <workItem from="1596010652145" duration="1778000" />
     </task>
     <task id="LOCAL-00001" summary="Feat (All) first steps">
       <created>1595058236752</created>
@@ -300,18 +342,18 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1595805345733" />
-    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595877978591">
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596002823793">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1595877978591" />
+    <state x="578" y="287" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596002823793" />
     <state x="0" y="107" key="FileDocumentManager.FileCacheConflict" timestamp="1594839259933">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="0" y="107" key="FileDocumentManager.FileCacheConflict/0.0.1680.1050@0.0.1680.1050" timestamp="1594839259933" />
-    <state x="482" y="258" key="NewPhpClassDialog" timestamp="1595821608773">
+    <state x="482" y="258" key="NewPhpClassDialog" timestamp="1596003747376">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="482" y="258" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1595821608773" />
+    <state x="482" y="258" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596003747376" />
     <state x="659" y="455" key="NewPhpFileDialog" timestamp="1595147642045">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
