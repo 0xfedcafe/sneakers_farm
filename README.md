@@ -4,7 +4,8 @@ This is a REST api for sneakers.farm service.
 
 ## Extended version
 
-I decide to improve basic api for a bit and added some featured, which you can find on `extended` branch.
+I decided to improve basic API for a bit and added some featured, which you can find on the extended branch.
+
 
 # Installation
 
@@ -120,8 +121,8 @@ I decide to improve basic api for a bit and added some featured, which you can f
 
     GET http://example/sneakers/search
 
-##### Options  
-- brand_id  
+##### Options
+- brand_id
 - set_id
 - query
 
